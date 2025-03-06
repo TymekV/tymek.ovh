@@ -54,7 +54,7 @@ export default async function HeatMapCard() {
             <Card className={card}>
                 <div className={heatMap}>
                     {days.map((d: ContributionDay, i: number) => {
-                        const colors = ['#181818', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
+                        const colors = ['#181818', '#0D4429', '#016D32', '#27A641', '#3AD353'];
                         const color = colors[Math.min(d.contributionCount, colors.length - 1)];
                         return (
                             <div key={i} className={day()} style={{ backgroundColor: color }} />
