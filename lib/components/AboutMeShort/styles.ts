@@ -19,7 +19,7 @@ export const card = css({
 
 export const socialsStyles = css({
     display: 'flex',
-    gap: '10px',
-    marginTop: '7px',
+    gap: '6px',
+    marginTop: '9px',
     alignItems: 'center',
 });

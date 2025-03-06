@@ -1,4 +1,4 @@
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGit, IconBrandGithub } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
 
@@ -15,8 +15,13 @@ export default function Hero() {
                         {
                             name: 'GitHub',
                             icon: IconBrandGithub,
-                            link: 'https://github.com/TymekV'
+                            link: 'https://github.com/TymekV',
                         },
+                        {
+                            name: 'Forgejo',
+                            icon: IconBrandGit,
+                            link: 'https://git.tymek.ovh/Tymek',
+                        }
                     ]}
                 />
             </div>
