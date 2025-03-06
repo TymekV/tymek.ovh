@@ -13,7 +13,7 @@ export const hero = css({
 });
 
 export const container = css({
-    minW: '800px',
+    minW: '770px',
     margin: '20px',
     display: 'flex',
     flexDirection: 'column',
