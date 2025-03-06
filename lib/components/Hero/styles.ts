@@ -15,4 +15,7 @@ export const hero = css({
 export const container = css({
     minW: '800px',
     margin: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px',
 });

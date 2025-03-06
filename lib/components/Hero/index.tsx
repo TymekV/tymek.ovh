@@ -1,6 +1,7 @@
 import { IconBrandGit, IconBrandGithub, IconBrandGitlab } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
+import HeatMapCard from "../HeatMapCard";
 
 export default function Hero() {
 
@@ -29,6 +30,7 @@ export default function Hero() {
                         },
                     ]}
                 />
+                <HeatMapCard />
             </div>
         </div>
     );
