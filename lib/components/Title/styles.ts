@@ -7,13 +7,13 @@ export const title = cva({
     },
     variants: {
         size: {
-            xxs: { fontSize: 12 },
-            xs: { fontSize: 14 },
-            sm: { fontSize: 16 },
-            md: { fontSize: 18 },
-            lg: { fontSize: 24 },
-            xl: { fontSize: 30 },
-            xxl: { fontSize: 40 },
+            xxs: { fontSize: 14 },
+            xs: { fontSize: 16 },
+            sm: { fontSize: 18 },
+            md: { fontSize: 20 },
+            lg: { fontSize: 26 },
+            xl: { fontSize: 32 },
+            xxl: { fontSize: 42 },
         },
         weight: {
             100: { fontWeight: 100 },

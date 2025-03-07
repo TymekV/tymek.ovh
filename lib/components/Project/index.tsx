@@ -15,11 +15,11 @@ type ProjectCardVariants = Exclude<Parameters<typeof projectCard>[0], undefined>
 
 export interface ProjectProps extends ProjectCardVariants {
     name: string;
-    image: string;
+    image?: string;
     icon: Icon;
     color: Token
     description: string;
-    link: string;
+    link?: string;
     repo: 'github' | 'forgejo' | 'other';
     githubRepo?: string;
     technologies: ProjectTechnology[];
@@ -44,7 +44,7 @@ export default async function Project({ name, image, icon, color, description, l
                 <ProjectHeader className={classes.content} name={name} icon={icon} color={color} description={description} descriptionClassName={classes.description} rightSection={<>
                     {stargazersCount !== -1 && <Metric icon={IconStar} value={stargazersCount.toString()} />}
                 </>} />
-                <img src={image} alt={name} className={classes.image} />
+                {image && <img src={image} alt={name} className={classes.image} />}
                 <div className={classes.technologies}>
                     {technologies.map(({ icon: Icon }, i) => (
                         <Icon size={16} key={i} />

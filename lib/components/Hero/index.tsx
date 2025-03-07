@@ -1,4 +1,4 @@
-import { IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandKotlin, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandSwift, IconBrandTypescript, IconBrandVscode, IconFlame, IconLeaf, IconMusic } from "@tabler/icons-react";
+import { IconBrandCpp, IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandKotlin, IconBrandMongodb, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandSwift, IconBrandTypescript, IconBrandVscode, IconFlame, IconLeaf, IconMusic, IconTruckDelivery } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
 import HeatMapCard from "../HeatMapCard";
@@ -86,6 +86,10 @@ export default function Hero() {
                                 name: 'React',
                             },
                             {
+                                icon: IconBrandNodejs,
+                                name: 'Node.js',
+                            },
+                            {
                                 icon: IconBrandVscode,
                                 name: 'VSCode API',
                             }
@@ -114,39 +118,76 @@ export default function Hero() {
                             {
                                 icon: IconBrandNodejs,
                                 name: 'Node.js',
+                            },
+                            {
+                                icon: IconBrandMongodb,
+                                name: 'MongoDB',
                             }
                         ]}
                     />
                 </Flex>
-                <Project
-                    name="Agin Music"
-                    image="/img/agin-music.png"
-                    color="colors.text.0"
-                    description="Agin Music is an open source client for OpenSubsonic-compatible servers written in React Native. It has been tested to work properly with Navidrome."
-                    icon={IconMusic}
-                    link="https://music.agin.rocks"
-                    repo="github"
-                    githubRepo="TymekV/AginMusicMobile"
-                    imagePosition="right"
-                    technologies={[
-                        {
-                            icon: IconBrandTypescript,
-                            name: 'TypeScript',
-                        },
-                        {
-                            icon: IconBrandReactNative,
-                            name: 'React Native (Expo)',
-                        },
-                        {
-                            icon: IconBrandSwift,
-                            name: 'Swift',
-                        },
-                        {
-                            icon: IconBrandKotlin,
-                            name: 'Kotlin',
-                        }
-                    ]}
-                />
+                <Flex>
+                    <Project
+                        name="Elfinmag"
+                        color="colors.primary"
+                        description="Warehouse management app for electronics production companies, streamlining inventory management and optimizing inventory."
+                        icon={IconTruckDelivery}
+                        repo="other"
+                        variant="square"
+                        imagePosition="bottomSmall"
+                        technologies={[
+                            {
+                                icon: IconBrandNextjs,
+                                name: 'Next.js',
+                            },
+                            {
+                                icon: IconBrandReact,
+                                name: 'React',
+                            },
+                            {
+                                icon: IconBrandNodejs,
+                                name: 'Node.js',
+                            },
+                            {
+                                icon: IconBrandMongodb,
+                                name: 'MongoDB',
+                            },
+                            {
+                                icon: IconBrandCpp,
+                                name: 'C++',
+                            },
+                        ]}
+                    />
+                    <Project
+                        name="Agin Music"
+                        image="/img/agin-music.png"
+                        color="colors.text.0"
+                        description="Agin Music is an open source client for OpenSubsonic-compatible servers written in React Native. It has been tested to work properly with Navidrome."
+                        icon={IconMusic}
+                        link="https://music.agin.rocks"
+                        repo="github"
+                        githubRepo="TymekV/AginMusicMobile"
+                        imagePosition="right"
+                        technologies={[
+                            {
+                                icon: IconBrandTypescript,
+                                name: 'TypeScript',
+                            },
+                            {
+                                icon: IconBrandReactNative,
+                                name: 'React Native (Expo)',
+                            },
+                            {
+                                icon: IconBrandSwift,
+                                name: 'Swift',
+                            },
+                            {
+                                icon: IconBrandKotlin,
+                                name: 'Kotlin',
+                            }
+                        ]}
+                    />
+                </Flex>
             </div>
         </div>
     );
