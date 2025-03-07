@@ -1,9 +1,10 @@
-import { IconBrandGit, IconBrandGithub, IconBrandGitlab } from "@tabler/icons-react";
+import { IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandReact, IconBrandTypescript, IconBrandVscode, IconFlame } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
 import HeatMapCard from "../HeatMapCard";
 import Tehnology, { TehnologyProps } from "../Technlogy";
 import Flex from "../Flex";
+import Project from "../Project";
 
 const TECHNOLOGIES: TehnologyProps[] = [
     {
@@ -64,6 +65,31 @@ export default function Hero() {
                     ]}
                 />
                 <HeatMapCard />
+                <Project
+                    name="Agin Requests"
+                    image="/img/agin-requests.png"
+                    color="colors.primary"
+                    description="Effortlessly send HTTP requests, listen to Server-Sent Events (SSE), connect to WebSocket (WS) endpoints, and communicate with Socket.IO servers — all from the comfort of your editor."
+                    icon={IconFlame}
+                    link="https://requests.agin.rocks"
+                    repo="github"
+                    githubRepo="TymekV/agin-requests"
+                    imagePosition="bottom"
+                    technologies={[
+                        {
+                            icon: IconBrandTypescript,
+                            name: 'TypeScript',
+                        },
+                        {
+                            icon: IconBrandReact,
+                            name: 'React',
+                        },
+                        {
+                            icon: IconBrandVscode,
+                            name: 'VSCode API',
+                        }
+                    ]}
+                />
             </div>
         </div>
     );
