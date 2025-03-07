@@ -1,19 +1,18 @@
 import { css } from '@/styled-system/css';
 import { token, Token } from '@/styled-system/tokens';
 import { Icon } from '@tabler/icons-react';
-import { FeatureIcon } from '../FeatureIcon';
-import { Title } from '../Title';
-import { Subtitle } from '../Subtitle';
-import { ProjectTechnology } from '.';
+import { Title } from '@lib/components/Title';
+import { Subtitle } from '@lib/components/Subtitle';
 
 export type ProjectHeaderProps = {
     name: string;
     icon: Icon;
     color: Token;
     description?: string;
+    rightSection?: React.ReactNode;
 }
 
-export default function ProjectHeader({ name, icon: Icon, color, description }: ProjectHeaderProps) {
+export default function ProjectHeader({ name, icon: Icon, color, description, rightSection }: ProjectHeaderProps) {
     return (
         <div className={container}>
             <div className={header}>
@@ -23,7 +22,9 @@ export default function ProjectHeader({ name, icon: Icon, color, description }: 
                     </div>
                     <Title size='sm'>{name}</Title>
                 </div>
-
+                <div className={right}>
+                    {rightSection}
+                </div>
             </div>
             <Subtitle size='sm'>{description}</Subtitle>
         </div>
@@ -66,8 +67,9 @@ const iconContainer = css({
     backgroundRepeat: 'no-repeat'
 });
 
-// const technologiesStyles = css({
-//     display: 'flex',
-//     gap: '6px',
-//     alignItems: 'center',
-// });
+const right = css({
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center',
+    marginRight: '8px'
+});

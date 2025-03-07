@@ -26,7 +26,7 @@ export const projectCard = sva({
         variant: {
             horizontal: {
                 card: {
-                    width: '500px',
+                    width: '510px',
                     height: '200px',
                 },
                 image: {
@@ -35,7 +35,7 @@ export const projectCard = sva({
             },
             square: {
                 card: {
-                    width: '260px',
+                    width: '250px',
                     height: '200px',
                 },
                 image: {

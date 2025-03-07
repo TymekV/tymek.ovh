@@ -37,11 +37,6 @@ export default function Hero() {
     return (
         <div className={hero}>
             <div className={container}>
-                <Flex>
-                    {TECHNOLOGIES.map((technology) => (
-                        <Tehnology key={technology.name} {...technology} />
-                    ))}
-                </Flex>
                 <AboutMeShort
                     name="Tymek Vonau"
                     description="I'm a full stack developer, currently working with React, Next.js, and TypeScript."
@@ -65,6 +60,11 @@ export default function Hero() {
                     ]}
                 />
                 <HeatMapCard />
+                <Flex>
+                    {TECHNOLOGIES.map((technology) => (
+                        <Tehnology key={technology.name} {...technology} />
+                    ))}
+                </Flex>
                 <Flex>
                     <Project
                         name="Agin Requests"
@@ -99,7 +99,7 @@ export default function Hero() {
                         icon={IconLeaf}
                         link="https://energy.agin.rocks"
                         repo="github"
-                        githubRepo="TymekV/agin-energy"
+                        githubRepo="TymekV/AginEnergy"
                         variant="square"
                         imagePosition="bottomSmall"
                         technologies={[
