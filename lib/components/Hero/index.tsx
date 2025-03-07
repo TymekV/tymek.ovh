@@ -1,4 +1,4 @@
-import { IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandTypescript, IconBrandVscode, IconFlame, IconLeaf } from "@tabler/icons-react";
+import { IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandKotlin, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandSwift, IconBrandTypescript, IconBrandVscode, IconFlame, IconLeaf, IconMusic } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
 import HeatMapCard from "../HeatMapCard";
@@ -12,16 +12,16 @@ const TECHNOLOGIES: TehnologyProps[] = [
         image: '/img/react.png',
     },
     {
+        name: 'Expo',
+        image: '/img/expo.png',
+    },
+    {
         name: 'Next.js',
         image: '/img/next.png',
     },
     {
-        name: 'TypeScript',
-        image: '/img/typescript.png',
-    },
-    {
-        name: 'Node.js',
-        image: '/img/node.svg',
+        name: 'MongoDB',
+        image: '/img/mongodb.svg',
     },
     {
         name: 'Docker',
@@ -118,6 +118,35 @@ export default function Hero() {
                         ]}
                     />
                 </Flex>
+                <Project
+                    name="Agin Music"
+                    image="/img/agin-music.png"
+                    color="colors.text.0"
+                    description="Agin Music is an open source client for OpenSubsonic-compatible servers written in React Native. It has been tested to work properly with Navidrome."
+                    icon={IconMusic}
+                    link="https://music.agin.rocks"
+                    repo="github"
+                    githubRepo="TymekV/AginMusicMobile"
+                    imagePosition="right"
+                    technologies={[
+                        {
+                            icon: IconBrandTypescript,
+                            name: 'TypeScript',
+                        },
+                        {
+                            icon: IconBrandReactNative,
+                            name: 'React Native (Expo)',
+                        },
+                        {
+                            icon: IconBrandSwift,
+                            name: 'Swift',
+                        },
+                        {
+                            icon: IconBrandKotlin,
+                            name: 'Kotlin',
+                        }
+                    ]}
+                />
             </div>
         </div>
     );

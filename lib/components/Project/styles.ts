@@ -1,7 +1,7 @@
 import { sva } from "@/styled-system/css";
 
 export const projectCard = sva({
-    slots: ['card', 'image', 'technologies'],
+    slots: ['card', 'image', 'technologies', 'content', 'description'],
     base: {
         card: {
             position: 'relative',
@@ -58,6 +58,17 @@ export const projectCard = sva({
                     right: '-20px',
                     bottom: '0px',
                     transform: 'translateY(50%)',
+                }
+            },
+            right: {
+                image: {
+                    position: 'absolute',
+                    right: '0px',
+                    top: '0px',
+                    transform: 'translateY(20%)',
+                },
+                description: {
+                    marginRight: '130px',
                 }
             }
         },

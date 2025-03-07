@@ -1,7 +1,9 @@
 import { css } from '@/styled-system/css';
 
 export const hero = css({
-    height: '100vh',
+    paddingTop: '30px',
+    paddingBottom: '30px',
+    minH: '100vh',
     backgroundImage: 'radial-gradient(#ffffff10 1px, transparent 0)',
     // backgroundSize: '40px 40px',
     // position: 'relative',

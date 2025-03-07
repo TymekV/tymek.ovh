@@ -41,7 +41,7 @@ export default async function Project({ name, image, icon, color, description, l
     return (
         <a href={link} target="_blank" rel="noreferrer">
             <Card className={classes.card}>
-                <ProjectHeader name={name} icon={icon} color={color} description={description} rightSection={<>
+                <ProjectHeader className={classes.content} name={name} icon={icon} color={color} description={description} descriptionClassName={classes.description} rightSection={<>
                     {stargazersCount !== -1 && <Metric icon={IconStar} value={stargazersCount.toString()} />}
                 </>} />
                 <img src={image} alt={name} className={classes.image} />

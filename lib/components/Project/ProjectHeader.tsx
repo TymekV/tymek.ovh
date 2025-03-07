@@ -5,6 +5,8 @@ import { Title } from '@lib/components/Title';
 import { Subtitle } from '@lib/components/Subtitle';
 
 export type ProjectHeaderProps = {
+    className?: string;
+    descriptionClassName?: string;
     name: string;
     icon: Icon;
     color: Token;
@@ -12,9 +14,9 @@ export type ProjectHeaderProps = {
     rightSection?: React.ReactNode;
 }
 
-export default function ProjectHeader({ name, icon: Icon, color, description, rightSection }: ProjectHeaderProps) {
+export default function ProjectHeader({ className, name, icon: Icon, color, description, descriptionClassName, rightSection }: ProjectHeaderProps) {
     return (
-        <div className={container}>
+        <div className={`${container} ${className}`}>
             <div className={header}>
                 <div className={headerLeft}>
                     <div className={iconContainer}>
@@ -26,7 +28,9 @@ export default function ProjectHeader({ name, icon: Icon, color, description, ri
                     {rightSection}
                 </div>
             </div>
-            <Subtitle size='sm'>{description}</Subtitle>
+            <div className={descriptionClassName}>
+                <Subtitle size='sm'>{description}</Subtitle>
+            </div>
         </div>
     )
 }
