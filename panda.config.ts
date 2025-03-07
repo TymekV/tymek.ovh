@@ -27,6 +27,10 @@ export default defineConfig({
     extend: {
       tokens: {
         colors: {
+          languages: {
+            rust: { value: '#b13000' },
+            csharp: { value: '#3b1898' },
+          },
           background: {
             value: '#0A0A0B',
           },

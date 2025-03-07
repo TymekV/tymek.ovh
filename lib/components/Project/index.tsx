@@ -3,7 +3,6 @@ import { Card } from "../Card";
 import { Token } from "@/styled-system/tokens";
 import ProjectHeader from "./ProjectHeader";
 import { projectCard } from "./styles";
-import { githubRest } from "@lib/helpers";
 import Metric from "../Metric";
 
 export type ProjectTechnology = {
@@ -31,8 +30,18 @@ export default async function Project({ name, image, icon, color, description, l
     let stargazersCount = -1;
     if (repo === 'github' && githubRepo) {
         console.log('cock', githubRepo)
-        const repoDetails = await githubRest.get(`/repos/${githubRepo}`);
-        const repoData = repoDetails.data;
+
+        const repoDetails = await fetch(`https://api.github.com/repos/${githubRepo}`, {
+            headers: {
+                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+            },
+            cache: 'force-cache',
+            next: {
+                revalidate: 60 * 60,
+            }
+        });
+
+        const repoData = await repoDetails.json();
 
         console.log(repoData);
         stargazersCount = repoData.stargazers_count;

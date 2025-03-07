@@ -42,6 +42,8 @@ export default async function HeatMapCard() {
         const { data } = await apolloClient.query({
             query: QUERY,
             variables: { userName: process.env.GITHUB_USERNAME },
+            fetchPolicy: 'cache-first',
+
         });
 
         if (!data) {

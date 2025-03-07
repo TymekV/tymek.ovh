@@ -1,10 +1,13 @@
-import { IconBrandCpp, IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandKotlin, IconBrandMongodb, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandSwift, IconBrandTypescript, IconBrandVscode, IconFlame, IconLeaf, IconMusic, IconTruckDelivery } from "@tabler/icons-react";
+import { IconBrandCpp, IconBrandGit, IconBrandGithub, IconBrandGitlab, IconBrandKotlin, IconBrandMongodb, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandReactNative, IconBrandRust, IconBrandSwift, IconBrandTypescript, IconBrandVscode, IconCode, IconFlame, IconLeaf, IconMusic, IconTruckDelivery } from "@tabler/icons-react";
 import AboutMeShort from "../AboutMeShort";
 import { container, hero } from "./styles";
 import HeatMapCard from "../HeatMapCard";
 import Tehnology, { TehnologyProps } from "../Technlogy";
 import Flex from "../Flex";
 import Project from "../Project";
+import Chart from "../Chart";
+import ChartSection from "../ChartSection";
+import TitleCard from "../TitleCard";
 
 const TECHNOLOGIES: TehnologyProps[] = [
     {
@@ -39,7 +42,7 @@ export default function Hero() {
             <div className={container}>
                 <AboutMeShort
                     name="Tymek Vonau"
-                    description="I'm a full stack developer, currently working with React, Next.js, and TypeScript."
+                    description="I'm a full stack developer, currently working with React, Next.js, TypeScript and Rust."
                     profilePicture="/profile.jpg"
                     socials={[
                         {
@@ -186,6 +189,14 @@ export default function Hero() {
                                 name: 'Kotlin',
                             }
                         ]}
+                    />
+                </Flex>
+                <Flex>
+                    <ChartSection />
+                    <TitleCard
+                        title="My Skills"
+                        subtitle="I'm experienced with the following programming languages"
+                        icon={IconCode}
                     />
                 </Flex>
             </div>
