@@ -32,6 +32,15 @@ export const projectCard = sva({
                 image: {
                     height: '250px',
                 }
+            },
+            square: {
+                card: {
+                    width: '260px',
+                    height: '200px',
+                },
+                image: {
+                    height: '200px',
+                }
             }
         },
         imagePosition: {
