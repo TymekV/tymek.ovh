@@ -100,6 +100,8 @@ export default function Hero() {
                         link="https://energy.agin.rocks"
                         repo="github"
                         githubRepo="TymekV/agin-energy"
+                        variant="square"
+                        imagePosition="bottomSmall"
                         technologies={[
                             {
                                 icon: IconBrandTypescript,

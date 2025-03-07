@@ -8,7 +8,7 @@ export const heatMap = css({
     display: 'grid',
     gridTemplateRows: 'repeat(7, 10px)',
     gridAutoFlow: 'column',
-    gap: '3px',
+    gap: '4px',
 });
 
 export const day = cva({

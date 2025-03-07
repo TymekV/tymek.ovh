@@ -1,4 +1,4 @@
-import { cva, sva } from "@/styled-system/css";
+import { sva } from "@/styled-system/css";
 
 export const projectCard = sva({
     slots: ['card', 'image', 'technologies'],
@@ -10,7 +10,7 @@ export const projectCard = sva({
         },
         image: {
             zIndex: 1,
-            maskImage: 'linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 90%)'
+            objectFit: 'contain',
         },
         technologies: {
             display: 'flex',
@@ -39,7 +39,7 @@ export const projectCard = sva({
                     height: '200px',
                 },
                 image: {
-                    height: '200px',
+                    height: '150px',
                 }
             }
         },
@@ -51,7 +51,25 @@ export const projectCard = sva({
                     bottom: '0px',
                     transform: 'translateY(70%)',
                 }
+            },
+            bottomSmall: {
+                image: {
+                    position: 'absolute',
+                    right: '-20px',
+                    bottom: '0px',
+                    transform: 'translateY(50%)',
+                }
+            }
+        },
+        withShading: {
+            true: {
+                image: {
+                    maskImage: 'linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 95%)',
+                }
             }
         }
+    },
+    defaultVariants: {
+        withShading: true,
     }
 });

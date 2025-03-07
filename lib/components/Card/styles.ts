@@ -9,7 +9,7 @@ export const card = sva({
             position: 'relative',
             transition: 'transform .5s ease',
             display: 'flex',
-            flexDir: 'row',
+            flexDir: 'column',
             _hover: {
                 transform: 'scale(1.01)',
             }

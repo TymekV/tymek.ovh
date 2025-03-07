@@ -23,8 +23,8 @@ export interface ProjectProps extends ProjectCardVariants {
     technologies: ProjectTechnology[];
 }
 
-export default function Project({ name, image, icon, color, description, link, repo, githubRepo, technologies, variant = 'horizontal', imagePosition }: ProjectProps) {
-    const classes = projectCard({ variant, imagePosition });
+export default function Project({ name, image, icon, color, description, link, repo, githubRepo, technologies, variant = 'horizontal', imagePosition, withShading }: ProjectProps) {
+    const classes = projectCard({ variant, imagePosition, withShading });
 
     return (
         <a href={link} target="_blank" rel="noreferrer">
@@ -32,8 +32,8 @@ export default function Project({ name, image, icon, color, description, link, r
                 <ProjectHeader name={name} icon={icon} color={color} description={description} />
                 <img src={image} alt={name} className={classes.image} />
                 <div className={classes.technologies}>
-                    {technologies.map(({ icon: Icon, name }, i) => (
-                        <Icon size={16} />
+                    {technologies.map(({ icon: Icon }, i) => (
+                        <Icon size={16} key={i} />
                     ))}
                 </div>
             </Card>
