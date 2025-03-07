@@ -24,6 +24,8 @@ export interface ProjectProps extends ProjectCardVariants {
     technologies: ProjectTechnology[];
 }
 
+export const revalidate = 60 * 60;
+
 export default async function Project({ name, image, icon, color, description, link, repo, githubRepo, technologies, variant = 'horizontal', imagePosition, withShading }: ProjectProps) {
     const classes = projectCard({ variant, imagePosition, withShading });
 
