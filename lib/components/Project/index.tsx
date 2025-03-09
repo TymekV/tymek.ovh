@@ -24,7 +24,7 @@ export interface ProjectProps extends ProjectCardVariants {
     technologies: ProjectTechnology[];
 }
 
-export const revalidate = 60 * 60;
+export const revalidate = 0;
 
 export default async function Project({ name, image, icon, color, description, link, repo, githubRepo, technologies, variant = 'horizontal', imagePosition, withShading }: ProjectProps) {
     const classes = projectCard({ variant, imagePosition, withShading });
@@ -39,7 +39,7 @@ export default async function Project({ name, image, icon, color, description, l
             },
             cache: 'force-cache',
             next: {
-                revalidate: 60 * 60,
+                revalidate: 60,
             }
         });
 
