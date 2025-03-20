@@ -1,5 +1,7 @@
 services:
   tymek_ovh:
+    image: ghcr.io/tymekv/tymek.ovh:latest
+    platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +15,7 @@ services:
       traefik.enable: true
       traefik.port: 3000
       traefik.http.services.tymek_ovh.loadbalancer.server.port: "3000"
-      traefik.http.routers.tymek_ovh.rule: "Host(`tymek.ovh`) && Path(`/`)"
+      traefik.http.routers.tymek_ovh.rule: "Host(`tymek.ovh`)"
 
 networks:
   default:
